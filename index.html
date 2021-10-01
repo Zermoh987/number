@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center" style="">
+                <h3 class="text-u">Convertissez votre numero de 8 à 10 chiffres</h3>
+                <input type="number" class="control" id="nbr" value="" placeholder="" required
+                style="width: 350px; height: 50px; border-radius: 5px;">
+                <button class="btn btn-success" type="button" id="convertir" onclick="convertir()"><h5>convertir</h5></button>
+            </div>
+            <p class=" text-center mt-3" id="text"></p>
+        </div>
+    </div>
+</body>
+<script>
+    // function convertir()
+    // {
+    //     var saisir = document.getElementById('nbr').value;
+    //     console.log(saisir);
+    // }
+        var orange =  [07,08,09,47,48,49,57,58,59,67,68,69,77,78,79,87,88,89,97,98,99];
+        var mtn = [04,05,06,44,45,46,54,55,56,64,65,66,74,75,76,84,85,86,94,95,96];
+        var moov = [01,02,03,41,42,43,51,52,53,61,62,63,71,72,73,81,82,83,91,92,93];
+    function convertir()
+    {
+        var numero = document.getElementById('nbr').value;
+        var indicatif = numero[0]+numero[1];
+        var p = document.getElementById('text');
+
+        if(document.getElementById("nbr").value.length==8)
+        {
+           if(orange = indicatif)
+           {
+            p.innerHTML = ('Votre numéro a 10 chiffres est: ')+('07')+numero;
+           }
+           
+           if(mtn = indicatif)
+           {
+            p.innerHTML = ('Votre numéro a 10 chiffres est: ')+('05')+numero;
+           }
+
+           if(moov = indicatif)
+           {
+            p.innerHTML = ('Votre numéro a 10 chiffres est: ')+('01')+numero;
+           }  
+        }
+        
+        else{
+            alert("le numéro saisir est incorrect");
+        }
+    }
+</script>
+</html>
